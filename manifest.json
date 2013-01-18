@@ -4,17 +4,17 @@
     "manifest_version": 2,
     "description": "You also have the problem, that last.fm sometimes scrobbles songs more than one time and you alway have to go and erase all duplets manually? This extension looks through your songs and deletes songs, if they appear multiple times in a row.",
     "browser_action": {
-        "default_icon": "icons/red-cross-48.png",
+        "default_icon": "/icons/red-cross-48.png",
         "default_title": "LastFM - Erase duplets"
     },
     "icons": {
-        "48": "icons/red-cross-48.png",
-        "128": "icons/red-cross-128.png"
+        "48": "/icons/red-cross-48.png",
+        "128": "/icons/red-cross-128.png"
     },
     "options_page": "options.html",
     "permissions": [
         "tabs",
-        "http://www.lastfm.de/user/*/tracks*"
+        "http://*/user/*/tracks*"
     ],
     "background": {
         "scripts": ["javascript/resources/jquery-1.7.2.min.js","javascript/lastfm_erase_duplets.js"]

@@ -28,9 +28,9 @@ function is_url_right( url ) {
 // logic for deleting double entries in LastFM scrobbled tracks list
 function delete_duplets(tab) {
     // must first load prototype, then jquery, because of silly use of prototype on last.fm page
-    chrome.tabs.executeScript(tab.id, {file: "resources/prototype.js"}, function(){
-        chrome.tabs.executeScript(tab.id, {file: "resources/jquery-1.7.2.min.js"}, function(){
-            chrome.tabs.executeScript(tab.id, {file:"contentscript.js"});
+    chrome.tabs.executeScript(tab.id, {file: "/javascript/resources/prototype.js"}, function(){
+        chrome.tabs.executeScript(tab.id, {file: "/javascript/resources/jquery-1.7.2.min.js"}, function(){
+            chrome.tabs.executeScript(tab.id, {file:"/javascript/contentscript.js"});
         });
     });
 }
