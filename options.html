@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>LastFM delete duplets - Options</title>
+        <script src="javascript/resources/jquery-1.7.2.min.js"></script>
+        <script src="javascript/options.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheets/options.css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Configure your last.fm-duplets deleter settings here: </h1>
+        </div>
+        <div class="section-header first">Last.FM - Username</div>
+        <p>
+            To use the LastFM duplets Deleter with your Last.FM account, you will need to tell us your username and your LastFM - siteacces first.
+        </p>
+        <p>Best practice is to just copy it from the URL-bar.</p>
+        <div id="username_input" style="margin-bottom:4px;" class="url_lines">
+            Your LastFm Username: <input type="text" name="lastfm_username" id="lastfm_username" />
+        </div>
+        <div class="section-header second">Last.FM - Siteaccess</div>
+        <div id="lastfm_siteaccess_url_selector">
+            <span>
+                What is your last.fm siteaccess?
+                <select id="lastfm_siteaccess_selectbox">
+                    <option value="http://www.last.fm/">http://www.last.fm/</option>
+                    <option value="http://www.lastfm.de/">http://www.lastfm.de/</option>
+                    <option value="http://www.lastfm.es/">http://www.lastfm.es/</option>
+                    <option value="http://www.lastfm.fr/">http://www.lastfm.fr/</option>
+                    <option value="http://www.lastfm.it/">http://www.lastfm.it/</option>
+                    <option value="http://www.lastfm.jp/">http://www.lastfm.jp/</option>
+                    <option value="http://www.lastfm.pl/">http://www.lastfm.pl/</option>
+                    <option value="http://www.lastfm.com.br/">http://www.lastfm.com.br/</option>
+                    <option value="http://www.lastfm.ru/">http://www.lastfm.ru/</option>
+                    <option value="http://www.lastfm.se/">http://www.lastfm.se/</option>
+                    <option value="http://www.lastfm.com.tr/">http://www.lastfm.com.tr/</option>
+                    <option value="http://cn.last.fm/">http://cn.last.fm/</option>
+                </select>
+            </span>
+        </div>
+        <div id="message-box"></div>
+        <div class="button-box">
+            <input type="button" class="button button-green" id="btnSave" value="Save Changes" />
+        </div>
+    </body>
+</html>

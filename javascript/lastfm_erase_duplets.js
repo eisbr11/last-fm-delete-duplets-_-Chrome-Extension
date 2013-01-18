@@ -1,13 +1,12 @@
-// todo : this must be set in an optionspage
-var lastfm_username = "your_username";
+var saved_settings = $.parseJSON(localStorage["settings"]);
 
-// todo : must be set in options page as well, select-box with all siteaccesses
-// must be set to your siteaccess, won't work otherwise
-var lastfm_trackurl = "http://www.lastfm.de/user/" + lastfm_username + "/tracks";
+var lastfm_username = saved_settings.username;
+var lastfm_trackurl = saved_settings.siteaccess_url + "user/" + lastfm_username + "/tracks";
 
 // fired when the button is clicked
 chrome.browserAction.onClicked.addListener(function(tab) {
-    // 
+    // Update settings
+    update_settings();
     if (is_url_right(tab.url)){
         // if you're on the right page, execute content-script
         delete_duplets(tab);
@@ -53,4 +52,8 @@ function change_to_url_or_create(url) {
         }
         open_new_tab_with_url(url);
     });
+}
+
+function update_settings(){
+    saved_settings = $.parseJSON(localStorage["settings"]);
 }
