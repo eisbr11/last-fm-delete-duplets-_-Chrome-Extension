@@ -18,7 +18,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 // test if the url is the right one
 function is_url_right( url ) {
-    if (url.indexOf(lastfm_trackurl)>-1){
+    // case-insensitive URL-Comparison
+    if (url.toLowerCase().indexOf(lastfm_trackurl.toLowerCase())>-1){
         return true;
     } else {
         return false;
